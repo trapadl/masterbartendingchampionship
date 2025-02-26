@@ -126,23 +126,6 @@
         display: none;
       }
     </style>
-    <!-- Base URL detection script -->
-    <script>
-      // Initialize base URL detection
-      window.getBaseUrl = function() {
-        const pathSegments = window.location.pathname.split('/');
-        if (pathSegments.length > 1 && pathSegments[1] === 'masterbartendingchampionship') {
-          return '/masterbartendingchampionship/';
-        }
-        return '/';
-      };
-      
-      window.getAbsolutePath = function(path) {
-        const baseUrl = window.getBaseUrl();
-        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
-        return `${baseUrl}${cleanPath}`;
-      };
-    </script>
     <script type="importmap">
       {
         "imports": {
@@ -152,8 +135,8 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/masterbartendingchampionship/assets/enter-Bej_uLcl.js"></script>
-    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-DbY42gfx.js">
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/enter-Bdag0UCn.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-Br4p3XrO.js">
     <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-DmaKE9B1.css">
   </head>
   <body>
@@ -225,6 +208,33 @@
               </div>
               <button type="submit" class="submit-button">Sign Up</button>
             </form>
+
+            <!-- <div class="social-login">
+              <button class="social-button">
+                <img src="google-icon.png" alt="Google" width="20">
+                Google
+              </button>
+              <button class="social-button">
+                <img src="facebook-icon.png" alt="Facebook" width="20">
+                Facebook
+              </button>
+              <button class="social-button">
+                <img src="instagram-icon.png" alt="Instagram" width="20">
+                Instagram
+              </button>
+              <button class="social-button">
+                <img src="linkedin-icon.png" alt="LinkedIn" width="20">
+                LinkedIn
+              </button>
+              <button class="social-button">
+                <img src="tiktok-icon.png" alt="TikTok" width="20">
+                TikTok
+              </button>
+              <button class="social-button">
+                <img src="reddit-icon.png" alt="Reddit" width="20">
+                Reddit
+              </button>
+            </div> -->
           </div>
         </div>
       </div>
