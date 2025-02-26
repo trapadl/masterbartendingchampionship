@@ -61,9 +61,26 @@
         border-radius: 4px;
       }
     </style>
-    <script type="module" crossorigin src="/assets/about-B-C2Wog8.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/countdown-1B-LzVIm.js">
-    <link rel="stylesheet" crossorigin href="/assets/countdown-DmaKE9B1.css">
+    <!-- Base URL detection script -->
+    <script>
+      // Initialize base URL detection
+      window.getBaseUrl = function() {
+        const pathSegments = window.location.pathname.split('/');
+        if (pathSegments.length > 1 && pathSegments[1] === 'masterbartendingchampionship') {
+          return '/masterbartendingchampionship/';
+        }
+        return '/';
+      };
+      
+      window.getAbsolutePath = function(path) {
+        const baseUrl = window.getBaseUrl();
+        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+        return `${baseUrl}${cleanPath}`;
+      };
+    </script>
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/about-Dr0Httrv.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-D8u1ft2f.js">
+    <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-DmaKE9B1.css">
   </head>
   <body>
     <div class="content">
@@ -165,8 +182,8 @@
             
               <p class="section-content">
                 Additionally, the system includes a <strong>time decay factor</strong>, meaning older results gradually lose influence. 
-                This ensures that rankings reflect a bartender’s <strong>current</strong> skill level rather than past achievements. 
-                Only a bartender’s <strong>best performances</strong> over a rolling period are factored into their final score, 
+                This ensures that rankings reflect a bartender's <strong>current</strong> skill level rather than past achievements. 
+                Only a bartender's <strong>best performances</strong> over a rolling period are factored into their final score, 
                 preventing someone from climbing the ranks purely through frequent participation.
               </p>
 

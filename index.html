@@ -6,8 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Master Bartending Championship</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Black&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-CqV96HXP.ico" />
+    <link rel="icon" type="image/x-icon" href="/masterbartendingchampionship/assets/favicon-CqV96HXP.ico" />
 
+    <!-- Base URL detection script -->
+    <script>
+      // Initialize SUPABASE credentials for the window
+      window.SUPABASE_URL = 'https://your-project.supabase.co';
+      window.SUPABASE_ANON_KEY = 'your-anon-key';
+      
+      // Initialize base URL detection
+      window.getBaseUrl = function() {
+        const pathSegments = window.location.pathname.split('/');
+        if (pathSegments.length > 1 && pathSegments[1] === 'masterbartendingchampionship') {
+          return '/masterbartendingchampionship/';
+        }
+        return '/';
+      };
+      
+      window.getAbsolutePath = function(path) {
+        const baseUrl = window.getBaseUrl();
+        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+        return `${baseUrl}${cleanPath}`;
+      };
+      
+      // Add redirection logic for client-side routing
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const path = urlParams.get('path');
+        if (path) {
+          // Clean up the URL
+          window.history.replaceState(null, null, path);
+        }
+      })();
+    </script>
     <script type="importmap">
       {
         "imports": {
@@ -17,10 +48,10 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/assets/main-BSANvqvg.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/countdown-1B-LzVIm.js">
-    <link rel="modulepreload" crossorigin href="/assets/OrganizerSelect-FMxHs_QS.js">
-    <link rel="stylesheet" crossorigin href="/assets/countdown-DmaKE9B1.css">
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/main-DnP7F3wn.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-D8u1ft2f.js">
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/OrganizerSelect-DxMEyqti.js">
+    <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-DmaKE9B1.css">
   </head>
   <body>
     <div class="loading-screen">
@@ -61,7 +92,7 @@
           <div class="column-left-spacer"></div>
           <div class="column-left-content">
             <h2>PROFESSIONAL BARTENDING. A NEW GLOBAL SPORT.</h2><br>
-            <p>Our goal is to transform one of the worlds oldest professions into a thrilling, worldwide competition. By uniting bartenders, bars, and brands under one transparent ranking system, MBC highlights the legacy, creativity, speed, and flair that make this profession an art form. Whether you’re a seasoned pro or new to the scene, step into our arena and discover the energy, camaraderie, and excitement that elevate bartending to a whole new level.</p>
+            <p>Our goal is to transform one of the worlds oldest professions into a thrilling, worldwide competition. By uniting bartenders, bars, and brands under one transparent ranking system, MBC highlights the legacy, creativity, speed, and flair that make this profession an art form. Whether you're a seasoned pro or new to the scene, step into our arena and discover the energy, camaraderie, and excitement that elevate bartending to a whole new level.</p>
             <br><p>These leaderboards rank bartenders with registered compeittion results. Legacy competitions are events held by brand organisers - the ones most bartenders are familiar with. MBC Speed, Traditional and Flair and MBC sanctioned events that adhere to guidelines of fairness, transparency and integrity.</p>
             <br><p>To add yourself to the leaderboard, click 'submit result'</p>
             <br><p>To find out more about our pillars and goals, click the about section of our site menu.</p>
