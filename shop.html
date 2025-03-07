@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Master Bartending Championship</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Black&display=swap" rel="stylesheet" />
+    <style>
+      .content-section {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      
+      .shop-categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      
+      .category-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: calc(50% - 1rem);
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .category-image {
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .category-image svg {
+        width: 80px;
+        height: 80px;
+        opacity: 0.7;
+      }
+      
+      .category-content {
+        padding: 1.5rem;
+        flex: 1;
+      }
+      
+      .category-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #ffffff;
+      }
+      
+      .category-description {
+        color: #aaaaaa;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      
+      .category-link {
+        display: inline-block;
+        padding: 0.75rem 1.25rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+      
+      .category-link:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      
+      @media (max-width: 768px) {
+        .category-card {
+          width: 100%;
+        }
+      }
+    </style>
+    <!-- Base URL detection script -->
+    <script>
+      // Initialize base URL detection
+      window.getBaseUrl = function() {
+        const pathSegments = window.location.pathname.split('/');
+        if (pathSegments.length > 1 && pathSegments[1] === 'masterbartendingchampionship') {
+          return '/masterbartendingchampionship/';
+        }
+        return '/';
+      };
+      
+      window.getAbsolutePath = function(path) {
+        const baseUrl = window.getBaseUrl();
+        const cleanPath = path.startsWith('/') ? path.substring(1) : path;
+        return `${baseUrl}${cleanPath}`;
+      };
+    </script>
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/shop-RKXZm5Vc.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-C5GiBqwj.js">
+    <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-Bw_2b-5n.css">
+  </head>
+  <body>
+    <div class="content">
+      <header class="small-header">
+        <nav class="menu-container" aria-label="Main Navigation">
+          <ul class="menu">
+            <li class="menu-item" data-submenu="legacy">Legacy Leaderboard</li>
+            <li class="menu-item" data-submenu="mbc">MBC Leaderboard</li>
+            <li class="menu-item" data-submenu="about">About</li>
+            <li class="menu-item" data-submenu="upcoming">Competition Schedule</li>
+            <li class="menu-item" data-submenu="shop">Shop</li>
+            <li class="menu-item" data-submenu="entry">Entry</li>
+          </ul>
+          <div class="submenu-inline"></div>
+        </nav>
+      </header>
+
+      <div class="page-content">
+        <div class="content-section">
+          <h1>MBC Shop</h1>
+          
+          <div class="shop-categories">
+            <!-- Membership Category -->
+            <div class="category-card">
+              <div class="category-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+                  <path d="M20 12v4H6a2 2 0 0 0-2 2c0 1.1.9 2 2 2h12v-4"></path>
+                </svg>
+              </div>
+              <div class="category-content">
+                <h2 class="category-title">Membership</h2>
+                <p class="category-description">
+                  Join the MBC community with our annual membership. Enjoy exclusive benefits including discounts on events, merchandise, and early access to competitions.
+                </p>
+                <a href="https://buy.stripe.com/7sI8zY2cleYm1LGeUW" class="category-link" target="_blank">View Membership</a>
+              </div>
+            </div>
+            
+            <!-- Events Category -->
+            <div class="category-card">
+              <div class="category-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <div class="category-content">
+                <h2 class="category-title">Events</h2>
+                <p class="category-description">
+                  Purchase tickets for upcoming MBC events, competitions, and workshops. Enhance your bartending skills and network with industry professionals.
+                </p>
+                <a href="#" class="category-link" onclick="alert('Coming soon!')">Coming Soon</a>
+              </div>
+            </div>
+            
+            <!-- Competition Equipment -->
+            <div class="category-card">
+              <div class="category-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 2v7.31"></path>
+                  <path d="M14 9.3V2"></path>
+                  <path d="M8.5 2h7"></path>
+                  <path d="M14 9.3a6 6 0 1 1-4 0"></path>
+                  <path d="M5.58 16.5h12.85"></path>
+                </svg>
+              </div>
+              <div class="category-content">
+                <h2 class="category-title">Competition Equipment</h2>
+                <p class="category-description">
+                  Professional-grade equipment designed for speed, flair, and traditional bartending competitions. Elevate your performance with the best tools.
+                </p>
+                <a href="#" class="category-link" onclick="alert('Coming soon!')">Coming Soon</a>
+              </div>
+            </div>
+            
+            <!-- Apparel -->
+            <div class="category-card">
+              <div class="category-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+                </svg>
+              </div>
+              <div class="category-content">
+                <h2 class="category-title">Apparel</h2>
+                <p class="category-description">
+                  Show your MBC pride with our branded clothing and accessories. High-quality apparel designed for both competition and casual wear.
+                </p>
+                <a href="#" class="category-link" onclick="alert('Coming soon!')">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
