@@ -80,9 +80,57 @@
         background-color: rgba(255, 255, 255, 0.2);
       }
       
+      .quantity-options {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .quantity-option {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        flex: 1;
+        min-width: 80px;
+      }
+      
+      .quantity-option:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      
+      .quantity-option strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: #ffffff;
+      }
+      
+      .quantity-option span {
+        font-size: 0.9rem;
+        color: #aaaaaa;
+      }
+      
+      .members-only-badge {
+        display: inline-block;
+        background-color: #ffcc00;
+        color: #000000;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+      
       @media (max-width: 768px) {
         .category-card {
           width: 100%;
+        }
+        
+        .quantity-options {
+          flex-direction: column;
         }
       }
     </style>
@@ -103,8 +151,8 @@
         return `${baseUrl}${cleanPath}`;
       };
     </script>
-    <script type="module" crossorigin src="/masterbartendingchampionship/assets/shop-RKXZm5Vc.js"></script>
-    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-C5GiBqwj.js">
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/shop-C8WrdkJg.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-BD2dHnwk.js">
     <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-Bw_2b-5n.css">
   </head>
   <body>
@@ -131,15 +179,19 @@
             <!-- Membership Category -->
             <div class="category-card">
               <div class="category-image">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
-                  <path d="M20 12v4H6a2 2 0 0 0-2 2c0 1.1.9 2 2 2h12v-4"></path>
-                </svg>
+                <img style="height: 100%;" src="/masterbartendingchampionship/assets/founders%20pins%20and%20member%20pins1-02-02-CaQkJmWz.png" />
               </div>
               <div class="category-content">
                 <h2 class="category-title">Membership</h2>
                 <p class="category-description">
                   Join the MBC community with our annual membership. Enjoy exclusive benefits including discounts on events, merchandise, and early access to competitions.
+                  <br><br>
+                    - 10% off ticket entry for a competition<br>
+                    - 10% off merchandise and equipment<br>
+                    - MBC lapel pin (special founders pin design for those who sign up before 28/4)<br>
+                    - Free entry to each event<br>
+                    - Member access to Trap Tuesdays<br>
+                    - Access to Members-only communication channels
                 </p>
                 <a href="https://buy.stripe.com/7sI8zY2cleYm1LGeUW" class="category-link" target="_blank">View Membership</a>
               </div>
@@ -160,43 +212,63 @@
                 <p class="category-description">
                   Purchase tickets for upcoming MBC events, competitions, and workshops. Enhance your bartending skills and network with industry professionals.
                 </p>
-                <a href="#" class="category-link" onclick="alert('Coming soon!')">Coming Soon</a>
+                <a href="https://linktr.ee/masterbartendingchampionship?fbclid=PAZXh0bgNhZW0CMTEAAabcAPuUpmQiOJzZdlMvqGwPoajJpUyQufnUci9ClqHbFJlyKds6-qYDif0_aem_X7e0ItVASJ8i67rDbWqpTA" class="category-link" target="_blank">Buy Tickets / Register to Compete</a>
               </div>
             </div>
             
-            <!-- Competition Equipment -->
+            <!-- Members-Only Lapel Pin -->
             <div class="category-card">
               <div class="category-image">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M10 2v7.31"></path>
-                  <path d="M14 9.3V2"></path>
-                  <path d="M8.5 2h7"></path>
-                  <path d="M14 9.3a6 6 0 1 1-4 0"></path>
-                  <path d="M5.58 16.5h12.85"></path>
-                </svg>
+                <img style="height: 100%;" src="/masterbartendingchampionship/assets/founders%20pins%20and%20member%20pins1-01-DaP7-MU2.png" />
               </div>
               <div class="category-content">
-                <h2 class="category-title">Competition Equipment</h2>
+                <h2 class="category-title">
+                  <span class="members-only-badge">Members Only</span>
+                  MBC Lapel Pin
+                </h2>
                 <p class="category-description">
-                  Professional-grade equipment designed for speed, flair, and traditional bartending competitions. Elevate your performance with the best tools.
+                  Exclusive lapel pin for MBC members. Show your affiliation with our community and enjoy recognition at all MBC events. Each pin is meticulously crafted with the official MBC logo.
+                  <br><br>
+                  This item is exclusively available to MBC members. Make sure to sign up for membership to access this and other members-only benefits.
                 </p>
-                <a href="#" class="category-link" onclick="alert('Coming soon!')">Coming Soon</a>
+                <a href="https://buy.stripe.com/eVa6rQeZ73fEeys8wz" class="category-link" target="_blank">Buy</a>
               </div>
             </div>
             
-            <!-- Apparel -->
+            <!-- Speed Bottles -->
             <div class="category-card">
               <div class="category-image">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path>
+                  <path d="M8 22h8"></path>
+                  <path d="M7 10h10"></path>
+                  <path d="M12 2v8"></path>
+                  <path d="M9 10v12"></path>
+                  <path d="M15 10v12"></path>
+                  <path d="M8 6h8"></path>
                 </svg>
               </div>
               <div class="category-content">
-                <h2 class="category-title">Apparel</h2>
+                <h2 class="category-title">Speed Bottles</h2>
                 <p class="category-description">
-                  Show your MBC pride with our branded clothing and accessories. High-quality apparel designed for both competition and casual wear.
+                  MBC Regulated speed bottles designed for competitive speed bartending. These bottles feature precision pour spouts and ergonomic design for maximum speed and accuracy. Perfect for training and competition use.
                 </p>
-                <a href="#" class="category-link" onclick="alert('Coming soon!')">Coming Soon</a>
+                
+                <div class="quantity-options">
+                  <a href="https://buy.stripe.com/cN26rQeZ7dUi8a4004" class="quantity-option" target="_blank">
+                    <strong>1 Bottle</strong>
+                    <span>$10</span>
+                  </a>
+                  
+                  <a href="https://buy.stripe.com/14k2bAaIR8zY9e8005" class="quantity-option" target="_blank">
+                    <strong>3 Bottles</strong>
+                    <span>$24</span>
+                  </a>
+                  
+                  <a href="https://buy.stripe.com/fZeaI6aIRcQe76014a" class="quantity-option" target="_blank">
+                    <strong>6 Bottles</strong>
+                    <span>$36</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

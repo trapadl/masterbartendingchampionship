@@ -96,7 +96,54 @@
         h1, h2 {
           padding: 0 0.5rem;
         }
+        
       }
+
+      .load-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .load-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .load-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .load-button:active {
+    transform: translateY(0);
+  }
+  
+  .load-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .load-button:hover .load-icon {
+    transform: rotate(180deg);
+  }
+  
+  @media (max-width: 768px) {
+    .load-button {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
     </style>
     <!-- Base URL detection script -->
     <script>
@@ -115,8 +162,8 @@
         return `${baseUrl}${cleanPath}`;
       };
     </script>
-    <script type="module" crossorigin src="/masterbartendingchampionship/assets/competition-ZKErM4nE.js"></script>
-    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-C5GiBqwj.js">
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/competition-BZzClzjy.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-BD2dHnwk.js">
     <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-Bw_2b-5n.css">
   </head>
   <body>
@@ -140,6 +187,15 @@
         <div class="content-section">
           <h1>Competition Schedule</h1>
           <div class="schedule-table-wrapper">
+
+            <div class="load-button-container">
+              <button id="load-competitions-btn" class="load-button" onclick="window.location.reload();">
+                <span class="load-icon">↻</span>
+                <span class="load-text">Load Competitions</span>
+              </button>
+            </div>
+
+
             <table class="schedule-table" id="upcoming-competitions-table">
               <thead>
                 <tr>

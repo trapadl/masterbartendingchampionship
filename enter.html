@@ -7,6 +7,93 @@
     <title>Sign Up - Master Bartending Championship</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Black&display=swap" rel="stylesheet" />
 
+    <script>
+
+      function initEnterPage() {
+        console.log("Initializing Enter page...");
+        
+        // Add any specific initialization for the Enter page here
+        const enterForm = document.querySelector('.enter-form');
+        const submitButton = document.querySelector('.submit-button');
+        
+        if (enterForm) {
+          console.log("Enter form found, attaching event listeners");
+          
+          enterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission logic here
+            console.log("Form submitted");
+            
+            // Example validation
+            const inputs = enterForm.querySelectorAll('input, select, textarea');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+              if (input.required && !input.value.trim()) {
+                isValid = false;
+                input.classList.add('error');
+              } else {
+                input.classList.remove('error');
+              }
+            });
+            
+            if (isValid) {
+              // Process form submission
+              console.log("Form is valid, processing submission");
+              // Add your form processing logic here
+            } else {
+              console.log("Form validation failed");
+            }
+          });
+          
+          // Add input event listeners for real-time validation
+          enterForm.querySelectorAll('input, select, textarea').forEach(input => {
+            input.addEventListener('input', function() {
+              if (this.required && !this.value.trim()) {
+                this.classList.add('error');
+              } else {
+                this.classList.remove('error');
+              }
+            });
+          });
+        }
+        
+        if (submitButton) {
+          console.log("Submit button found");
+          submitButton.addEventListener('click', function() {
+            console.log("Submit button clicked");
+          });
+        }
+      }
+      
+      // Method 1: Execute when DOM is loaded directly
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname.includes('enter.html')) {
+          console.log("Enter.html loaded directly - initializing");
+          initEnterPage();
+        }
+      });
+      
+      // Method 2: Execute when page is loaded via AJAX
+      document.addEventListener('pageContentLoaded', function() {
+        if (window.location.pathname.includes('enter.html')) {
+          console.log("Enter.html loaded via AJAX - initializing");
+          initEnterPage();
+        }
+      });
+      
+      // Method 3: Listen for the custom event from pageload.js
+      window.addEventListener('dynamicPageLoaded', function(event) {
+        if (event.detail.pageName === 'enter') {
+          console.log("Enter page dynamically loaded - initializing");
+          initEnterPage();
+        }
+      });
+      
+      // Export the init function for direct calling
+      window.initEnterPage = initEnterPage;
+      
+          </script>
     <style>
       .content-section {
         max-width: 600px;
@@ -195,8 +282,8 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/masterbartendingchampionship/assets/enter-CjVAfpzo.js"></script>
-    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-C5GiBqwj.js">
+    <script type="module" crossorigin src="/masterbartendingchampionship/assets/enter-DzgSjeoa.js"></script>
+    <link rel="modulepreload" crossorigin href="/masterbartendingchampionship/assets/countdown-BD2dHnwk.js">
     <link rel="stylesheet" crossorigin href="/masterbartendingchampionship/assets/countdown-Bw_2b-5n.css">
   </head>
   <body>
@@ -316,7 +403,7 @@
               <ul>
                 <li>10% off ticket entry for any MBC endorsed competition</li>
                 <li>10% off merch and equipment from our online merch store</li>
-                <li>A members lapel pin, which admits discount to ticketed entries</li>
+                <li>A members lapel pin, which admits discount to ticketed entries (special founders pin design for those who sign up before 28/4)</li>
                 <li>1x Free entry ticket to each hosted MBC endorsed event for you or a friend</li>
                 <li>Access to members only nights at trap.</li>
                 <li>Access to Members only communication channels</li>
@@ -333,5 +420,7 @@
       </div>
     </div>
 
+
+
   </body>
 </html>
