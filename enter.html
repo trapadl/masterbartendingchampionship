@@ -331,7 +331,7 @@
             <div class="error-message"></div>
             <div class="success-message"></div>
 
-            <form class="auth-form active" id="signin-form" method="POST">
+            <form class="auth-form active" id="signin-form" method="POST" onsubmit="return false;">
               <div class="form-group">
                 <label class="form-label">Email</label>
                 <input type="email" name="email" class="form-input" required>
@@ -343,7 +343,7 @@
               <button type="submit" class="submit-button">Sign In</button>
             </form>
 
-            <form class="auth-form" id="signup-form" method="POST">
+            <form class="auth-form" id="signup-form" method="POST" onsubmit="return false;">
               <div class="form-group">
                 <label class="form-label">Full Name</label>
                 <input type="text" name="fullName" class="form-input" required>
